@@ -1,5 +1,5 @@
 var express = require("express");
-var burger = require("../models/cat.js");
+var burger = require("../models/burger.js");
 
 var router = express.Router();
 
@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post("/api/cats", (req, res) => {
+router.post("/api/burgers", (req, res) => {
     burger.create([
         "burger_name", "devoured"
     ], [
@@ -23,7 +23,7 @@ router.post("/api/cats", (req, res) => {
     });
 });
 
-router.put("/api/cats/:id", (req, res) => {
+router.put("/api/burgers/:id", (req, res) => {
     var condition = "id = " + req.params.id;
     console.log("condition", condition);
     burger.update({
