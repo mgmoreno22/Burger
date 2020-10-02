@@ -6,8 +6,11 @@ USE burger_db;
 CREATE TABLE burgers (
     id INT NOT NULL AUTO_INCREMENT,
     burger_name VARCHAR(255) NOT NULL,
-    devoured BOOLEAN DEFAULT false,
+    devoured BOOLEAN NOT NULL DEFAULT false,
     PRIMARY KEY (id)
 );
 
 INSERT INTO burgers (burger_name) VALUES ('Cheesebuger'), ('Hamburger');
+INSERT INTO burgers (burger_name, devoured) VALUES ("Grilled Chicken", true);
+
+SELECT * FROM burgers;

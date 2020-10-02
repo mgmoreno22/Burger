@@ -62,17 +62,17 @@ var orm = {
             if (err) throw err;
             cb(result);
         });
-    },
-    delete: function(table, condition, cb) {
-        var query = "DELETE FROM " + table;
-        query += " WHERE ";
-        query += condition;
-
-        connection.query(query, (err, result) => {
-            if (err) throw err;
-            cb(result);
-        });
     }
+    // delete: function(table, condition, cb) {
+    //     var query = "DELETE FROM " + table;
+    //     query += " WHERE ";
+    //     query += condition;
+
+    //     connection.query(query, (err, result) => {
+    //         if (err) throw err;
+    //         cb(result);
+    //     });
+    // }
 };
 
 module.exports = orm;
