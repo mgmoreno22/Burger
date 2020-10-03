@@ -1,5 +1,41 @@
-li {
+body {
+    background-color: #C2DFE3;
+    color: white;
+}
+
+.body-container {
+    background-color: #9DB4C0;
+    padding: 15px;
+}
+
+.rounded {
+    border-radius:.50rem!important
+}
+
+.list-group-item {
+    color: black;
+}
+
+#heroImg {
+    width: 40%;
+}
+
+@media only screen and (max-width: 576px) {
+    #heroImg {
+        width: 70%
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #heroImg {
+        width: 65%;
+    }
+}
+
+#form-title {
     padding: 5px;
-    margin: 5px;
-    background: #eee;
+}
+
+.form-div {
+    margin-top: 10px;
 }

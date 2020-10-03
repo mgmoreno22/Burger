@@ -1,9 +1,8 @@
 $(function() {
     $(".change-devour").on("click", (event) => {
-        var id = $(event.currentTarget).data("id");
-        var newDevour = $(event.currentTarget).data("newdevour");
+        var id = $(this).data("id");
         var newDevourState = {
-            devour: newDevour
+            devour: 1
         };
 
         $.ajax("/api/burgers/" + id, {
