@@ -55,7 +55,7 @@ var orm = {
         query += " SET ";
         query += objToSql(objColVals);
         query += " WHERE ";
-        query += condition;
+        query += " devoured=true;";
 
         console.log(query);
         connection.query(query, (err, result) => {
@@ -63,16 +63,6 @@ var orm = {
             cb(result);
         });
     }
-    // delete: function(table, condition, cb) {
-    //     var query = "DELETE FROM " + table;
-    //     query += " WHERE ";
-    //     query += condition;
-
-    //     connection.query(query, (err, result) => {
-    //         if (err) throw err;
-    //         cb(result);
-    //     });
-    // }
 };
 
 module.exports = orm;

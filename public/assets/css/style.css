@@ -8,6 +8,10 @@ body {
     padding: 15px;
 }
 
+#titleText {
+    color: black;
+}
+
 .rounded {
     border-radius:.50rem!important
 }

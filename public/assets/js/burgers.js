@@ -1,8 +1,8 @@
 $(function() {
     $(".change-devour").on("click", (event) => {
-        var id = $(this).data("id");
+        var id = event.currentTarget.attributes[1].value;
         var newDevourState = {
-            devour: 1
+            devour: true
         };
 
         $.ajax("/api/burgers/" + id, {
@@ -10,7 +10,6 @@ $(function() {
             data: newDevourState
         }).then(
             function() {
-                console.log("changed burger to", newDevour);
                 location.reload();
             }
         );
@@ -35,17 +34,4 @@ $(function() {
             }
         );
     });
-
-    // $(".delete-burger").on("click", function(event) {
-    //     var id = $(this).data("id");
-
-    //     $.ajax("/api/burgers/" + id, {
-    //         type: "DELETE"
-    //     }).then(
-    //         function() {
-    //             console.log("deleted burger", id);
-    //             location.reload();
-    //         }
-    //     );
-    // });
 });
